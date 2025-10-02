@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Post</title>
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+
+<body>
+    <div id="header-content"></div>
+
+    <div class="main-post">
+        <h2>Criar postagem</h2>
+        <label for="title">Titulo da postagem</label><br>
+        <input type="text" id="title"><br>
+        <label for="category">Categoria</label><br>
+        <select id="category">
+            <option value="Noticía">Noticía</option>
+            <option value="Aviso">Avisos</option>
+            <option value="Escolar">Escolar</option>
+            <option value="Evento">Eventos</option>
+        </select><br>
+        <label for="content">Conteudo</label><br>
+        <textarea id="content"></textarea><br>
+        <label for="imagemCapa"> Imagem de capa (URL): </label><br>
+        <input type="text" id="imagem" placeholder="Cole o link da imagem"><br>
+        <button id="btnPost">Postar</button>
+    </div>
+
+    <script type="module" src="/js/createPost.js"></script>
+    <script>
+        async function loadHeader() {
+            const response = await fetch('./../contents/header.html');
+            const headerHTML = await response.text();
+            document.getElementById('header-content').innerHTML = headerHTML;
+        }
+        loadHeader();
+    </script>
+</body>
+
+</html>

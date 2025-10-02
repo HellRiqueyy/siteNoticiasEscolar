@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searc Post</title>
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+
+<body>
+    <div id="header-content"></div>
+    <div id="list-conteiner">
+        <div id="listar-post">
+            <p>carregando noticías...</p>
+        </div>
+    </div>
+
+    <div id="formulario-edicao" style="display: none;">
+        <h2> Editar Noticía</h2>
+        <label for="editar-titulo"> Titulo: </label>
+        <input type="text" id="editar-titulo">
+        <br> <br>
+        <label for="editar-categoria"> Categoria: </label>
+        <select id="editar-categoria">
+            <option value="Noticía">Noticía</option>
+            <option value="Aviso">Avisos</option>
+            <option value="Escolar">Escolar</option>
+            <option value="Evento">Eventos</option>
+        </select>
+        <br> <br>
+        <label for="editar-content"> Conteudo </label>
+        <textarea id="editar-content"></textarea>
+        <br> <br>
+        <label for="editar-image">Imagem de capa</label>
+        <input type="text" id="editar-imagem" placeholder="cole a url da imagem">
+        <br> <br>
+        <input type="hidden" id="editar-id">
+
+        <button id="btnSalvarEdicao"> Salvar Alterações </button>
+        <button id="btnCancelarEdicao"> Cancelar </button>
+    </div>
+
+
+
+
+
+
+
+    <script type="module" src="/js/listPost.js"></script>
+    <script>
+        async function loadHeader() {
+            const response = await fetch('./../contents/header.html');
+            const headerHTML = await response.text();
+            document.getElementById('header-content').innerHTML = headerHTML;
+        }
+        loadHeader();
+    </script>
+</body>
+
+</html>
