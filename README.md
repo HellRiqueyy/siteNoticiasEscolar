@@ -42,3 +42,4 @@ Ulbra São Lucas
 
 ## Autor
 Nícolas Gabriel Silveira Fernandes
+Henrique da Silva de Moura
