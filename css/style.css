@@ -131,10 +131,58 @@ input, textarea {
 .evento-item {
   background-color: #afafaf;
 }
-#formulario-edicao input{
-  margin-left: 140px;
-  margin-right: 140px;
-  width: 67%;
+#formulario-edicao {
+  max-width: 340px;
+  margin: 32px auto;
+  padding: 18px 16px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #10177822;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#formulario-edicao label {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 6px;
+  font-size: 0.98rem;
+}
+#formulario-edicao input {
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #10177844;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#formulario-edicao-botoes {
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  margin: 8px auto 0 auto;
+  justify-content: center;
+}
+#formulario-edicao-botoes button {
+  flex: 1;
+  padding: 6px 0;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  background: #101778;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#formulario-edicao-botoes button:hover {
+  background: #181c3a;
+}
+#formulario-edicao button:hover {
+  background: #181c3a;
 }
 #btnEnviar {
   margin-left: 140px;
